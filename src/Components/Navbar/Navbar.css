@@ -1,0 +1,13 @@
+nav {
+    margin: 0;
+    background-color: #9abdf9;
+    border: 1px solid #019AD2;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-img {
+    height: 100%
+}
