@@ -1,5 +1,8 @@
 import React, {useState} from 'react';
 import './Auth.css';
+
+import APIURL from '../../helpers/environment'
+
 const Auth = (props) => {
 
     const [ login, setLogin] = useState(false);
@@ -20,8 +23,8 @@ const Auth = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        let url = login ? 'http://localhost:3005/auth/signin' :
-        'http://localhost:3005/auth/signup';
+        let url = login ? `${APIURL}/auth/signin` :
+        `${APIURL}/auth/signup`;
 
         let reqBody = {
             firstName : firstName,
@@ -30,7 +33,7 @@ const Auth = (props) => {
             password : password
         };
 
-        fetch(url, {
+        fetch(url, {               //THIS NEEDS TO BE REVIEWED
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
