@@ -35,7 +35,7 @@ const Auth = (props) => {
             headers : {
                 'Content-Type' : 'application/json'
             },
-            body : JSON.stringify(reqBody)
+            body : JSON.stringify({user: reqBody})
         })
         .then(res => res.json())
         .then(data => props.storeToken(data.sessionToken))

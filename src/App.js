@@ -1,15 +1,18 @@
 import React, {useState} from 'react';
 import Navbar from './Components/Navbar/Navbar.js';
 import Auth from './Components/Auth/Auth';
-import Pies from './Components/Pies/Pies';
+import Poems from './Components/Poems/Poems';
 import './App.css';
 
 function App() {
   const [token, setToken] = useState(undefined);
 
 const storeToken = (token) => {
+  console.log('token => ', token)
   setToken(token);
 };
+
+
 
 const clearToken = () => {
   setToken(undefined);
@@ -19,7 +22,7 @@ const clearToken = () => {
     <div className="App">
      <Navbar clearToken = { clearToken }/>
       {
-        token ? <Pies /> : <Auth storeToken={ storeToken }/>
+        token ? <Poems /> : <Auth storeToken={ storeToken }/>
       }
     </div>
   );
