@@ -33,7 +33,7 @@ const Auth = (props) => {
             password : password
         };
 
-        fetch(url, {               //THIS NEEDS TO BE REVIEWED
+        fetch(url, {
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'
@@ -44,6 +44,7 @@ const Auth = (props) => {
         .then(data => props.storeToken(data.sessionToken))
         .catch(err => console.log(err));
     };
+
 
     return(
         <form className="card" onSubmit={(e) => handleSubmit(e)}>
@@ -65,10 +66,10 @@ const Auth = (props) => {
             <label htmlFor="password">Password</label>
             <input onChange={(e) =>setPassword(e.target.value)}type ="text" name ="password" />
             <br />
-            <button onClick={(e) =>loginToggle (e)}href="#" className="myButton">Login/Sign Up Toggle</button>
             <button  href="#" className="myButton">Submit</button>
+            <button onClick={(e) =>loginToggle (e)}href="#" className="myButton">Login/Sign Up Toggle</button>
         </form>
-    )
+                )
 }
 
 export default Auth;

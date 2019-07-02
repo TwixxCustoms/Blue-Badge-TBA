@@ -4,12 +4,12 @@ table, td {
 }
 
 thead {
-    background-color: whitesmoke;
-    border-bottom: 2px solid darkslategray;
+    background-color: darkslategray;
+    border-bottom: 2px solid black;
 }
 
 tr {
-    border-bottom: 2px solid darkgrey;
+    border-bottom: 2px solid darkslategrey;
 }
 
 table {

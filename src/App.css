@@ -8,6 +8,10 @@
   pointer-events: none;
 }
 
+.Spin {
+  animation: App-logo-spin infinite 2s linear;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,7 +24,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #0D2305;
 }
 
 @keyframes App-logo-spin {
