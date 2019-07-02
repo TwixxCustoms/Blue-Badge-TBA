@@ -8,7 +8,7 @@ const [poems, setPoems ] = useState([]);
 useEffect(() => fetchPoems(), []);
 
 const fetchPoems = () => {
-let url = 'https://xh-bbproject.herokuapp.com/poems/';
+let url = 'https://xh-poem-server.herokuapp.com/poems/';
 
 fetch(url)
 .then(response => response.json())
