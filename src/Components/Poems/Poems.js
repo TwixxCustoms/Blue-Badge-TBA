@@ -167,4 +167,4 @@ Example.propTypes = {};
 ReactDOM.render(<Example />, document.getElementById("root"));
 
 
-export default Poems;
+export default Example;
